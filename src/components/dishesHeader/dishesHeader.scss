@@ -1,0 +1,38 @@
+.dishes_header {
+    margin: 0 auto;
+    background-color: #fff;
+    &-wrapper {
+        margin: 0 auto;
+        max-width: 950px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+            h3 {
+                span {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #5B5B5B;
+                }
+        }
+    }
+    &-logo {
+        span {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 35px;
+            color: #5B5B5B;
+        }
+    }
+    img {
+        &:hover {
+            transform: scale(0.8);
+            transition: 0.7s all;
+        }
+    }
+
+}

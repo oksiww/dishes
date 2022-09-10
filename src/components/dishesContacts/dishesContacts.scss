@@ -1,0 +1,25 @@
+.dishes__contacts {
+    margin: 100px auto 50px auto;
+    max-width: 950px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    &-img {
+        width: 600px;
+    }
+    &-descr {
+        img {
+            display: block;
+            margin-top: 15px;
+        }
+        p {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: #7A7A7A;
+            margin-top: 40px;
+        }
+    }
+}

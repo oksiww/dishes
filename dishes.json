@@ -1,0 +1,40 @@
+{
+    "dishes": [
+      {
+        "id": 1,
+        "name": "Тарелка “Банановый лист”",
+        "description": "40 см",
+        "price": "1,600 RUB",
+        "img": "assets/dish1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Блюдце",
+        "description": "14 см",
+        "price": "599 RUB",
+        "img": "assets/dish2.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Тарелка плоская",
+        "description": "23 см",
+        "price": " 990 RUB",
+        "img": "assets/dish3.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Набор “Розовый шоколад”",
+        "description": "",
+        "price": " 10.990 RUB",
+        "img": "assets/dish4.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Набор “Голубая лагуна”",
+        "description": "",
+        "price": " 10.990 RUB",
+        "img": "assets/dish5.jpg"
+      }
+    ],
+    "requests": []
+  }

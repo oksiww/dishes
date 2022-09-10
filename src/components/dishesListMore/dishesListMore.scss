@@ -1,0 +1,53 @@
+.dishes__more {
+    margin: 100px auto 50px auto;
+    max-width: 950px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 80px;
+    &-descr {
+        &-title {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 47px;
+            color: #5B5B5B;
+        }
+        &-description {
+            font-family: 'Roboto';
+            font-style: normal;
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            color: rgba(91, 91, 91, 0.8);
+        }
+        &-btn {
+            width: 250px;
+            height: 60px;
+            border: 2px solid rgba(91, 91, 91, 0.5);
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            margin-top: 120px;
+            font-size: 20px;
+            line-height: 23px;
+            color: rgba(91, 91, 91, 0.8);
+        }
+    }
+    &-set {
+        div {
+            display: grid;
+            grid-template-columns: 240px 20px;
+            column-gap: 10px;
+        }
+        &-descr {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: rgba(91, 91, 91, 0.8);
+        }
+    }
+}

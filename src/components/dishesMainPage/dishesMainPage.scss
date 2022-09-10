@@ -1,0 +1,50 @@
+.dishes {
+    margin: 0 auto;
+    background: url(../../assets/main_bg.jpg) center center/cover no-repeat;
+    padding-bottom: 50px;
+    height: 100vh;
+    &_wrapper {
+        margin: 0 auto;
+        max-width: 950px;
+    }
+    &_title {
+        width: 486px;
+        height: 139px;
+        padding-top: 200px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 70px;
+        color: #FFFFFF;
+    }
+    
+    &_descr {
+        width: 675px;
+        height: 23px;
+        margin-top: 160px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    &_btn {
+        width: 300px;
+        height: 70px;
+        margin-top: 70px;
+        background-color: #DEC3C3;
+        color: #5B5B5B;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 29px;
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.7s;
+        } 
+    }
+}  
+    
