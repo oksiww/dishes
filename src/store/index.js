@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import dishes from '../components/dishesList/dishesSlice';
+import reducer from '../reducers';
 
 const store = configureStore({
-    reducer: dishes,
+    reducer: reducer,
     devTools: process.env.NODE_ENV !== 'production'
 })
 

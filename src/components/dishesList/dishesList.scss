@@ -1,79 +1,16 @@
-.dishes_list {
+.dishes_container {
     margin: 50px auto 0 auto;
     max-width: 950px;
-    position: relative;
-    &-item {
-        &-descr {
-            display: grid;
-            grid-template-columns: 130px 110px;
-            column-gap: 20px;
-            &-first {
-                grid-template-columns: 130px 110px;
-                column-gap: 220px;
-            }
-        }
-        h3 {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 23px;
-            color: #5B5B5B;
-        }
-        p {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 23px;
-            color: #5B5B5B;
-        }
-        span {
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 22px;
-            line-height: 35px;
-            color: #5B5B5B;
-        }
-        &-first {
-            img {
-                width: 450px;
-                height: 600px;
-            }
-        }
-        &-second {
-            position: absolute;
-            left: 700px;
-            top: 0px;
-            img {
-                width: 250px;
-                height: 250px;
-            }
-        }
-        &-third {
-            position: absolute;
-            left: 600px;
-            top: 350px;
-            img {
-                width: 250px;
-                height: 250px;
-            }
-        }
+    ul {
+        display: flex;
+        justify-content: space-between;
     }
-    &-btn {
-        width: 100px;
-        height: 40px;
-        background-color: #DEC3C3;
-        color: #5B5B5B;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 18px;
-        &:hover {
-            transform: scale(0.9);
-            transition: all 0.6s;
-        }
-    }
+}
+.dishes_loading, .dishes_error, .dishes_none {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #5B5B5B;
 }

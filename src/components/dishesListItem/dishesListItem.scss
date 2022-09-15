@@ -1,0 +1,50 @@
+.dishes__list {
+    &-img {
+        width: 240px;
+        height: 240px;
+    }
+    &-body {
+        &-title {
+            margin-top: 10px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 23px;
+            color: #5B5B5B;
+        }
+        &-text {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 23px;
+            color: #5B5B5B;
+        }
+        &-price {
+            margin-top: 5px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 35px;
+            color: #5B5B5B;
+        }
+    }
+    &-btn {
+        width: 240px;
+        height: 50px;
+        margin-top: 10px;
+        background-color: #DEC3C3;
+        color: #5B5B5B;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        &:hover {
+            transform: scale(0.9);
+            transition: all 0.6s;
+        }
+    }
+}

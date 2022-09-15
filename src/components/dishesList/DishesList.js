@@ -1,63 +1,49 @@
+import {useHttp} from '../../hooks/http.hook';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-
-import dish1 from '../../assets/dish1.jpg';
-import dish2 from '../../assets/dish2.jpg';
-import dish3 from '../../assets/dish3.jpg';
+import { dishesFetching, dishesFetched, dishesFetchingError } from '../../actions';
+import DishesListItem from "../dishesListItem/DishesListItem";
 
 import './dishesList.scss';
 
 const DishesList = () => {
-    
+    const {dishes, dishesLoadingStatus} = useSelector(state => state);
+    const dispatch = useDispatch();
+    const {request} = useHttp();
 
+    useEffect(() => {
+        dispatch(dishesFetching());
+        request("http://localhost:3001/dishes")
+            .then(data => dispatch(dishesFetched(data)))
+            .catch(() => dispatch(dishesFetchingError()))
+
+        // eslint-disable-next-line
+    }, []);
+
+    if (dishesLoadingStatus === "loading") {
+        return <h5 className='dishes_loading'>Загрузка...</h5>;
+    } else if (dishesLoadingStatus === "error") {
+        return <h5 className="dishes_error">Ошибка загрузки</h5>
+    }
+
+    const renderDishesList = (arr) => {
+        if (arr.length === 0) {
+            return <h5 className="dishes_none">Товаров пока нет</h5>
+        }
+
+        return arr.map(({id, ...props}) => {
+            return <DishesListItem key={id} {...props}/>
+        })
+    }
+
+    const elements = renderDishesList(dishes);
     return (
-        <div className="dishes_list">
-            <div className="dishes_list-wrapper">
-                <div className="dishes_list-item dishes_list-item-first">
-                    <img src={dish1} alt="Посуда" />
-                    <div className="dishes_list-item-descr dishes_list-item-descr-first">
-                        <div>
-                            <h3>Тарелка 'Банановый лист'</h3>
-                            <p>40 см</p>
-                        </div>
-                        <div>
-                            <span>1,600 RUB</span>
-                            <button className='dishes_list-btn'>Добавить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="dishes_list-wrapper">
-                <div className="dishes_list-item dishes_list-item-second">
-                    <img src={dish2} alt="Посуда" />
-                    <div className="dishes_list-item-descr">
-                        <div>
-                            <h3>Блюдце</h3>
-                            <p>14 см</p>
-                        </div>
-                        <div>
-                            <span>599 RUB</span>
-                            <button className='dishes_list-btn'>Добавить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="dishes_list-wrapper">
-                <div className="dishes_list-item dishes_list-item-third">
-                    <img src={dish3} alt="Посуда" />
-                    <div className="dishes_list-item-descr">
-                        <div>
-                            <h3>Тарелка плоская</h3>
-                            <p>23 см</p>
-                        </div>
-                        <div>
-                            <span> 990 RUB</span>
-                            <button className='dishes_list-btn'>Добавить в корзину</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className='dishes_container'>
+            <ul>
+                {elements}
+            </ul>
         </div>
-        
     )
 }
 
